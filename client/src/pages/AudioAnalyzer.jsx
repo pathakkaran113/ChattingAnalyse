@@ -6,8 +6,8 @@ const AudioAnalyzer = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysis, setAnalysis] = useState('');
   // Hard-coded API key - replace with your actual key
-  const apiKey = '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'; // IMPORTANT: Replace this with your actual API key
-  const [error, setError] = useState('');
+  const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+    const [error, setError] = useState('');
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
   

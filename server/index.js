@@ -44,6 +44,13 @@ const io = socket(server,{
   }
 })
 
+app.get("*", (req, res) => {
+  res.send("Hello 👋, your server is up and running!");
+});
+
+
+
+
 global.onlineUsers = new Map();
 
 io.on("connection", (socket)=>{
